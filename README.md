@@ -1,5 +1,6 @@
 ## Future Messaging System
 
+![App Screenshot](assets/Screenshot.png)
 A simple, secure, and modern messaging system built with FastAPI and SQLite, deployed live on Render.
 Users can send messages that are stored safely and can be retrieved instantly.
 
