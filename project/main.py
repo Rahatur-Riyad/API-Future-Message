@@ -8,6 +8,10 @@ from project.models import CreateUser, CreateMessage
 from datetime import datetime, timezone
 
 app = FastAPI()
+@app.on_event("startup")
+async def startup():
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
